@@ -1,0 +1,327 @@
+@import 'variables';
+
+/* component */
+.section {
+  padding-top: 64px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.banner { 
+  height: calc(100vh - 108px);
+  background: url("https://hexschool.github.io/webLayoutTraining1st/week3/banner.png") center;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+
+  padding-right: 10%;
+}
+
+.title-box {
+  display: inline-block;
+  text-align: right;
+  color: $secondary-text-color;
+  h2 {
+      font: normal normal bold 64px/96px "Noto Sans";
+  }
+  h3 {
+      font: normal normal normal 36px/54px "Noto Sans";
+  }
+}
+
+.feature-item {
+  width: 20%;
+
+  /* for img vertical align center */
+  .img-wrap {
+      height: 100px;
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: center;
+  }
+
+  h3 {
+      color: $secondary-text-color;
+      font: normal normal bold 24px/36px "Noto Sans";
+  }
+
+  p {
+      font: normal normal normal 16px/24px "Noto Sans";
+      text-align: left;
+  }
+}
+
+.product-list {
+  .icon-title {
+      color: $primary-theme-color;
+      font: italic normal 900 48px/72px Roboto;
+      font-variant-caps: all-petite-caps;
+      margin: 0 30px;
+  }
+  .profile-pic {
+      width: 57%;
+  }
+}
+
+.recommend-list {
+  li {
+      width: 23%;
+      margin-bottom: 30px;
+  }
+  .text-box {
+      border: 1px solid #DEE2E6;
+      padding-top: 14px;
+      padding-bottom: 15px;
+      padding-left: 16px;
+      padding-right: 16px;
+      text-align: left;
+  }
+  h4 {
+      font: normal normal 500 14px/21px Roboto;
+      padding-bottom: 7px;
+  }
+  p {
+      font: normal normal normal 16px/24px Roboto;
+      padding-bottom: 10px;
+  }
+  .timestamp {
+      color: #707070;
+      font: normal normal normal 14px/21px Roboto;
+  }
+}
+
+.special {
+  background: url("https://hexschool.github.io/webLayoutTraining1st/week3/bg.png") center;
+  background-size: cover;
+  li {
+      width: 48%; // assume fix button size
+  }
+}
+
+.contact-form {
+  text-align: left;
+  .text-area {
+      width: 100%;
+      border: 1px solid #000000;
+      background-color: $secondary-background-color;
+      
+      font: normal normal normal 16px/24px "Noto Sans";
+      padding: 14px 16px;
+  }
+  .text-area-large {
+      height: 136px;
+  }
+}
+
+/* special button */
+.img-btn {
+  display: block;
+  position: relative; // for title over img
+  color: $primary-theme-color; 
+  
+  .overlay {
+      position: absolute;
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.5);
+      z-index: 10;
+  }
+
+  // title over img
+  h3 {
+      font: normal normal bold 72px/108px Roboto;
+      // center both vertically & horizonally
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      // NOTE: in this case, words will break
+      // to a new line if it's longer than 50%
+      // of the width of the parent container.
+      // The words will be squeezed when it move to
+      // the 50/50% position of the container
+      // before it's move back to the correct position.
+      // Therefore we have to disable word wrapping.
+      white-space: nowrap;
+      z-index: 100;
+  }
+}
+
+/* titles */
+.section-title {
+  color: $secondary-text-color;
+  font: normal normal bold 48px/72px "Noto Sans";
+  margin-bottom: 60px;
+
+  &.light {
+      color: $dark-text-color;
+  }
+}
+
+.title {
+  font: normal normal bold 48px/72px "Noto Sans"; 
+  margin-bottom: 24px;
+}
+
+/* ------ for tablet ----- */
+@media screen and (max-width: 992px) {
+
+  .section {
+    padding: 40px 0;
+  }
+
+  .feature-list {
+      flex-wrap: wrap;
+      justify-content: space-around;
+  }
+
+  .feature-item {
+      width: 35%;
+  }
+
+  .recommend-list {
+      @include wrap-n-column(2, 30, 690);
+      img {
+          min-width: 100%;
+      }
+  }
+
+  .product-list .row-reverse {
+      flex-direction: row;
+  }
+
+  .feature-item {
+      .img-wrap {
+          margin-bottom: 16px;
+      }
+      h3 {
+          font: normal normal bold 20px/30px "Noto Sans";
+      }
+  }
+
+  .product-list {
+      .icon-title {
+          font-size: 28px;
+          line-height: 42px;
+      }
+  }
+
+  .contact-form {
+      .text-area {
+          font: normal normal normal 14px/21px "Noto Sans";
+          padding: 8px 12px;
+      }
+      .text-area-large {
+          height: 100px;
+      }
+  }
+
+  .img-btn h3 {
+    font: normal normal bold 32px/43px Roboto;
+  }
+
+  /* titles */
+  .title-box {
+    h2 {
+        font: normal normal bold 48px/72px "Noto Sans";
+        padding-right: 0;
+    }
+    h3 {
+        font: normal normal 500 20px/30px "PingFang TC";
+    }
+  }
+
+  .section-title, .title {
+      font: normal normal bold 32px/48px "Noto Sans";
+      margin-bottom: 32px;
+  }
+}
+
+/* for smartphone */
+@media screen and (max-width: 768px) {
+
+  .section {
+    padding: 32px 0;
+  }
+
+  .banner {
+      background: url("https://hexschool.github.io/webLayoutTraining1st/week3/banner-sm.png") center;
+      background-size: cover;
+      align-items: end;
+      padding-right: 5%;
+      height: 394px;
+  }
+
+  .title-box {
+      h2 {
+          font: normal normal bold 32px/72px "Noto Sans";
+      }
+      h3 {
+          font: normal normal 500 16px/30px "PingFang TC";
+      }
+  }
+
+  .section-title, .title {
+      font: normal normal bold 24px/48px "Noto Sans";
+      margin-bottom: 20px;
+  }
+
+  .feature-item {
+      width: 68%;
+      .img-wrap {
+          height: 80px;
+      }
+      margin-bottom: 40px;
+  }
+
+  .product-list {
+      .profile-pic {
+          width: 100%;
+      }
+      a {
+          display: block;
+          position: relative;
+
+          .icon-title {
+              margin: 0; // reset margin
+
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              white-space: nowrap;
+
+              color: $dark-text-color;
+              .icon-sun {
+                  background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-sun-white.svg");
+              }
+              .icon-diamond {
+                  background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-diamond-white.svg");
+              }
+              .icon-thunder {
+                  background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-thunder-white.svg");
+              }
+          }
+      }
+  }
+
+  .recommend-list {
+      @include wrap-n-column(1,0);
+  }
+
+  .special .container {
+      @include wrap-n-column(1,0);
+      li {
+          padding-bottom: 16px;
+          &:last-child {
+              padding-bottom: 0;
+          }
+      }
+  }
+}

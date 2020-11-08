@@ -1,0 +1,133 @@
+@import 'variables';
+
+.header {
+    padding: 30px 88px;
+}
+
+.footer {
+    padding-top: 36px;
+    padding-bottom: 28px;
+    padding-right: 39px;
+    padding-left: 39px;
+}
+
+.footer-bottom {
+    // width set to 100%
+    // to let it stretch in another flex container
+    // with another div before it
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-bottom-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.contact {
+    padding-top: 18px;
+    padding-bottom: 20px;
+    font: normal normal normal 36px/54px Roboto;
+    .icon-title {
+        img {
+            width: 48px;
+        }
+    }
+}
+
+/* =========== RWD ========== */
+
+/* ------ for tablet ----- */
+@media screen and (max-width: 992px) {
+    .contact{
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .icon-list {
+        img {
+            width: 24px;
+            height: auto;
+        }
+    }
+    .footer {
+        .icon-title img{
+            width: 28px;
+            height: auto;
+        } 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 0 0;
+    }
+    .header-inner {
+        flex-direction: column;
+        align-items: center;
+
+        .logo {
+            width: 48px;
+            padding: 10px 0;
+        }
+
+        .nav-p-64, .nav-p-32 {
+            width: 100%;
+            // force update the width.
+            // or it will be the same as the original width
+            flex-wrap: wrap;
+            li {
+                a {
+                    display: block;
+                    text-align: center;
+                }
+                width: 50%;
+                margin: 0;
+                padding: 8px 0;
+                border: 1px solid $dark-text-color;
+            }
+        }
+    }
+
+    .contact{
+        padding-top: 0;
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    .footer{
+        padding-left: 15px;
+        padding-right: 15px;
+        .menu {
+            display: none;
+        }
+
+        .icon-title img{
+            width: 20px;
+            height: auto;
+        }
+    }
+
+    .footer-upper {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: start;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        justify-content: start;
+        line-height: 21px;
+        .nav {
+            flex-direction: column;
+        }
+    }
+
+    .footer-bottom-wrap {
+        justify-content: space-between;
+        align-items: end;
+    }
+}
+
