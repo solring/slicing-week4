@@ -1,5 +1,37 @@
 @import 'variables';
 
+@mixin banner-pic($url) {
+    width: 50%;
+    height: 100%;
+    background: center / cover no-repeat url($url); 
+}
+
+@mixin product-item-list($row_n, $font, $line_height, $pic_height, $margin) {
+    @include wrap-n-column($row_n, 30, 1110); 
+    li {
+        margin-bottom: $margin;
+        text-align: left;
+    }
+
+    .pic-container {
+        width: 100%;
+        height: $pic_height;
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+
+    .price {
+        color: $secondary-text-color;
+        font: normal normal 500 $font/$line_height Roboto;
+    }
+
+    .name {
+        font: normal normal normal $font/$line_height Roboto;
+    } 
+}
+
 .product-tabs {
     max-width: 1386px;
     margin: 0 auto;
@@ -18,17 +50,22 @@
 .product-banner {
     height: 309px;
     .banner-left {
-        width: 50%;
-        height: 100%;
-        background: center / cover no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/banner-1.png");
+        @include banner-pic("https://hexschool.github.io/webLayoutTraining1st/week3/banner-1.png");
     }
     .banner-right {
-        width: 50%;
-        height: 100%;
-        background: center / cover no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/banner-2.png");
+        @include banner-pic("https://hexschool.github.io/webLayoutTraining1st/week3/banner-2.png");
     }
 }
 
+.product-banner-sunglasses {
+    height: 309px;
+    .banner-left {
+        @include banner-pic("https://hexschool.github.io/webLayoutTraining1st/week3/banner-3.png");
+    }
+    .banner-right {
+        @include banner-pic("https://hexschool.github.io/webLayoutTraining1st/week3/banner-2.png");
+    }
+}
 .product-details {
     padding-top: 88px;
     h2 {
@@ -39,31 +76,18 @@
     }
 }
 
-.product-item-list {
-    @include wrap-n-column(4, 30, 1110); 
-    li {
-        margin-bottom: 104px;
-        text-align: left;
-    }
-
-    .pic-container {
-        width: 100%;
-        height: 164px;
-        overflow: hidden;
-        img {
-            width: 100%;
-        }
-    }
-
-    .price {
-        color: $secondary-text-color;
-        font: normal normal 500 24px/36px Roboto;
-    }
-
-    .name {
-        font: normal normal normal 24px/36px Roboto;
-    }
+.product-item-list-4r {
+    @include product-item-list(4, 24px, 36px, 164px, 104px);
 }
+
+.product-item-list-3r {
+    @include product-item-list(3, 18px, 30px, 224px, 112px);
+    // disalbe row-btw-center
+    .row-btw-center {
+        flex-direction: column;
+        align-items: start;
+    }
+} 
 
 .btn-group {
     display: inline-flex;
@@ -123,10 +147,17 @@
         }
     }
 
-    .product-item-list {
+    .product-item-list-4r, .product-item-list-3r {
         @include wrap-n-column(2, 30, 690);
         li {
             margin-bottom: 72px;
+        }
+    }
+
+    .product-item-list-3r {
+        .row-btw-center {
+            flex-direction: row;
+            align-items: center;
         }
     }
 }
@@ -163,7 +194,7 @@
         }
     }
 
-    .product-item-list {
+    .product-item-list-4r, .product-item-list-3r {
         @include wrap-n-column(1, 0, 345);
         li {
             margin-bottom: 32px;
