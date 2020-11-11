@@ -1,0 +1,199 @@
+.store-list {
+    @include wrap-n-column(3, 30, 1140);
+
+    &>li {
+        margin-bottom: 32px;
+    }
+
+    .pic-container {
+        width: 100%;
+        height: auto; 
+        overflow: hidden;
+    }
+
+    .btn {
+        text-align: center;
+        font: normal normal bold 19px/26px "Noto Sans";
+        padding: 16px;
+    }
+}
+
+.store-detail-outer {
+    
+    &>li {
+        border: 1px solid #00000020;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    h3 {
+        font: normal normal normal 24px/36px "Noto Sans";
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+}
+
+.store-detail {
+    font: normal normal normal 20px/30px "Noto Sans";
+    padding-top: 16px;
+    padding-bottom: 16px;
+    @include list-gap(8px);
+
+    .icon, .icon-sm, .icon-lg {
+        margin-top: 5px; //(30-20)/2
+        margin-right: 12px;
+    }
+
+}
+
+.store-form {
+    padding-top: 16px;
+    padding-bottom: 32px;
+    label {
+        display: block;
+        font: normal normal normal 24px/30px "Noto Sans";
+        margin-right: 20px;
+        flex-shrink: 0; // prevent from wrapping
+    }
+}
+
+.store-select {
+    width: 324px;
+    font: normal normal normal 18px/24px "Noto Sans";
+    color: #495057;
+    border: 1px solid #CED4DA;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 19px;    
+}
+
+.store-map {
+    align-items: stretch;
+    
+    .store-detail-outer {
+    }
+    
+    .store {
+        width: 40%;
+    }
+    map {
+        width: 60%;
+        background: center / cover no-repeat url("../images/map-lg.png");
+    } 
+}
+
+.store {
+    .pic-container {
+        width: 100%;
+    }
+    margin-right: 30px;
+}
+
+@media screen and (max-width: 992px) {
+    .store-list {
+        @include wrap-n-column(2, 30, 690);
+
+        .pic-container {
+            height: 164px;
+        }
+
+        .btn {
+            font: normal normal normal 14px/21px "Noto Sans";
+        }
+    }
+    
+    .store-form {
+        padding-top: 8px;
+        padding-bottom: 24px;
+        label {
+            font-size: 16px;
+        }
+    }
+
+    .store-select {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        padding-left: 16px;   
+    }
+
+    .store-map {
+        flex-direction: column;
+        .store {
+            width: 100%;
+        }
+        map {
+            width: 100%;
+            height: 465px;
+        }
+    }
+
+    .store {
+        display: flex;
+        align-items: center;
+        margin-right: 0;
+        margin-bottom: 32px;
+
+        .pic-container {
+            width: 50%;
+            margin-right: 30px;
+        }
+
+        .store-detail-outer {
+            width: 50%;
+        }
+    }
+
+    .store-detail-outer {
+        h3 {
+            padding-top: 8px;
+            padding-bottom: 8px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+
+    .store-detail {
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .store-list {
+        @include wrap-n-column(1, 30, 690); 
+    }
+    
+    .store-form {
+        padding-bottom: 20px;
+        label {
+            font-size: 16px;
+            margin-right: 12px;
+        }
+    }
+
+    .store-select {
+        width: 277px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        padding-left: 16px;   
+    }
+
+    .store-map {
+        map {
+            background: center / cover no-repeat url("../images/map-sm.png"); 
+            height: 227px;
+        }
+    }
+
+    .store {
+        flex-direction: column;
+        .pic-container {
+            width: 100%;
+            margin-right: 0;
+        }
+        .store-detail-outer {
+            width: 100%;
+        }
+    }
+}

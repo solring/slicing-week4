@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&display=swap');
-@import 'variables';
 
 /* base */
 img {
@@ -26,9 +25,22 @@ a {
     margin: 0 auto;
 }
 
+.container-p30 {
+    max-width: 1140px; // including margin for flex wrapping
+    margin: 0 auto;
+}
+
 .container-sm {
     max-width: 730px;
     margin: 0 auto;
+}
+
+.pic-banner{
+    background: center / cover no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/banner-3.png");
+    height: 304px;
+    h1 {
+        font: normal normal bold 64px/80px Noto Sans;
+    }
 }
 
 /* navs */
@@ -49,6 +61,10 @@ a {
 }
 
 /* layouts */
+.row {
+    display: flex;
+}
+
 .row-start-center {
     display: flex;
     align-items: center;
@@ -69,6 +85,11 @@ a {
     align-items: center;
 }
 
+.row-start-bottom {
+    display: flex;
+    align-items: end;
+}
+
 /* list gaps */
 .list-gap-32 {
     @include list-gap(32px);
@@ -83,14 +104,23 @@ a.btn {
     display: block;
 }
 
+.btn {
+    text-align: center;
+    margin: 0 auto;
+}
+
 .btn-primary {
     display: block;
     border: none;
     background-color: $primary-theme-color;
     color: $dark-text-color;
-    font: normal normal bold 16px/24px "Noto Sans";
-    margin: 0 auto;
-    padding: 16px 143px;
+}
+
+.btn-black{
+    display: block;
+    border: none;
+    background-color: #000000;
+    color: $dark-text-color;
 }
 
 /* font & padding & margin styles */
@@ -120,12 +150,20 @@ a.btn {
     padding-top: 18px;
 }
 
+.pb-16 {
+    padding-bottom: 16px;
+}
+
 .mt-8 {
     margin-top: 8px;
 }
 
 .mt-40 {
     margin-top: 40px;
+}
+
+.mr-24 {
+    margin-right: 24px;
 }
 
 .mr-38 {
@@ -148,8 +186,11 @@ a.btn {
     margin-bottom: 104px;
 }
 
-/* other style */
+.mb-304 {
+    margin-bottom: 304px;
+}
 
+/* other style */
 .primary-theme {
     background: $primary-theme-color;
     color: $dark-text-color;
@@ -172,6 +213,10 @@ a.btn {
 
 .text-center {
     text-align: center;
+}
+
+.h100 {
+    height: 100%;
 }
 
 /* icons */
@@ -204,12 +249,27 @@ a.btn {
     }
 }
 
+.icon-sm {
+    display: inline-block;
+    vertical-align: middle;
+    height: 21px;
+    width: 21px; 
+}
+
 .icon {
     display: inline-block;
     vertical-align: middle;
     height: 48px;
     width: 48px;
 }
+
+.icon-lg {
+    display: inline-block;
+    vertical-align: middle;
+    height: 64px;
+    width: 64px;
+}
+
 .icon-diamond {
     background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-diamond.svg");
 }
@@ -220,6 +280,26 @@ a.btn {
 
 .icon-thunder {
     background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-thunder.svg");
+}
+
+.icon-location{
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-location.svg");
+}
+
+.icon-question{
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-help.svg");
+}
+
+.icon-phone {
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-phone-black.svg");
+}
+
+.icon-map {
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-phone-black.svg");
+}
+
+.icon-clock {
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-clock-black.svg");
 }
 
 .brown-sqrt {
@@ -243,15 +323,19 @@ a.btn {
         max-width: 690px;
     }
 
+    .container-p30 {
+        max-width: 730px;
+    }
+
     .container-sm {
         max-width: 450px;
     }
 
-    /* buttons */
-    
-    .btn-primary {
-        font: normal normal bold 14px/21px "Noto Sans";
-        padding: 8px 76px;
+    /* pic banner */
+    .pic-banner {
+        h1 {
+            font: normal normal bold 48px/80px "Noto Sans";
+        }
     }
 
     /* icon */
@@ -260,12 +344,25 @@ a.btn {
         height: 32px;
     }
 
+    .icon-sm {
+        width: 20px;
+        height: 20px;
+    }
+
+    .icon-lg {
+        width: 48px;
+        height: 48px;
+    }
+
     /* padding & margin */
     .list-gap-32 {
         @include list-gap(8px);
      }
      .list-gap-16 {
          @include list-gap(8px);
+     }
+     .nap-p-64 {
+         @include nav(40px);
      }
      .nav-p-32 {
          @include nav(24px);
@@ -278,6 +375,9 @@ a.btn {
      }
      .mb-42 {
          margin-bottom: 24px;
+     }
+     .mb-304 {
+         margin-bottom: 104px;
      }
 
      /* fonts */
@@ -298,7 +398,7 @@ a.btn {
 
 /* for smartphone */
 @media screen and (max-width: 768px) {
-    .container, .container-sm {
+    .container, .container-sm, .container-p30 {
         max-width: 345px;
     }
 
@@ -322,6 +422,9 @@ a.btn {
 
     /* padding & margin */
     .mb-104 {
+        margin-bottom: 56px;
+    }
+    .mb-304 {
         margin-bottom: 56px;
     }
 
