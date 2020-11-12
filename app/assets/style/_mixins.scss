@@ -11,9 +11,9 @@
 @mixin list-gap($gap: 0) {
     li {
         margin-bottom: $gap;
-    }
-    &:last-child {
-        margin-bottom: 0;
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 }
 
@@ -49,15 +49,6 @@
         } @else {
             width: $width;
             margin-right: unquote($gap + 'px');
-        }
-    }
-}
-
-@mixin list-gap($gap) {
-    li {
-        padding-bottom: $gap;
-        &:last-child {
-            padding-bottom: 0;
         }
     }
 }

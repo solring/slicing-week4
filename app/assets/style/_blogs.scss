@@ -1,0 +1,125 @@
+.blog-header {
+    padding-top: 12px;
+    padding-bottom: 14px;
+    font: normal normal bold 20px/24px "Noto Sans";
+
+    &.primary-theme {
+        background: $primary-color-dark;
+    }
+}
+
+.blog-list {
+    @include list-gap(60px);
+    text-align: left;
+    padding-top: 82px;
+
+    &>li {
+        display: flex;
+    }
+
+    img {
+        width: 57%;
+        height: auto;
+        flex-shrink: 0;
+        margin-right: 30px;
+    }
+
+    h2 {
+        font: normal normal normal 32px/63px "Noto Sans";
+        color: $secondary-text-color;
+    }
+
+    h3 {
+        font: normal normal 500 20px/30px Roboto;
+    }
+
+    p {
+        font: normal normal normal 20px/30px "Noto Sans";
+        color: $primary-gray-color;
+    }
+
+    .desc {
+        position: relative;
+    }
+    .date {
+        font: normal normal 500 16px/24px Roboto;
+        opacity: 0.7;
+    }
+
+    .subtitle {
+        margin-bottom: 24px;
+    }
+
+    .more {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        font: normal normal 900 36px/54px "Noto Sans";
+        color: $secondary-text-color;
+    }
+}
+
+/* ------ for tablet ----- */
+@media screen and (max-width: 992px) {
+    .blog-header {
+        font-size: 16px;
+    }
+    .blog-list {
+        @include list-gap(32px);
+        padding-top: 40px;
+
+        img {
+            width: 48%;
+        }
+        h2 {
+            font-size: 20px;
+            line-height: 28px;
+        }
+        h3 {
+            font-size: 16px;
+            line-height: 21px;
+        }
+        p {
+            font-size: 14px;
+            line-height: 21px;
+        }
+        .date {
+            font-size: 14px;
+        }
+        .more {
+            font-size: 14px;
+            line-height: 21px;
+            color: $primary-gray-color;
+            font-variant-caps: all-small-caps;
+        }
+        .subtitle {
+            margin-bottom: 16px;
+        }
+    }
+}
+
+/* for smartphone */
+@media screen and (max-width: 768px) {
+
+    .blog-list {
+        @include list-gap(26px);
+        padding-top: 24px;
+
+        img {
+            width: 100%;
+        }
+
+        &>li {
+            flex-direction: column;
+        }
+        h2 {
+            font-size: 16px;
+        }
+        h3 {
+            font-size: 14px;
+        }
+        .subtitle {
+            margin-bottom: 0;
+        }
+    }
+}

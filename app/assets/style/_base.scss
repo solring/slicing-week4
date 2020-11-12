@@ -36,16 +36,21 @@ a {
 }
 
 .pic-banner{
-    background: center / cover no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/banner-3.png");
+    background: center / cover no-repeat url("../images/pic-banner.png");
     height: 304px;
     h1 {
-        font: normal normal bold 64px/80px Noto Sans;
+        font: normal normal bold 64px/80px "Noto Sans";
     }
+    padding-bottom: 8px;
 }
 
 /* navs */
 .nav-p-64 {
     @include nav(64px);
+}
+
+.nav-p-48 {
+    @include nav(48px);
 }
 
 .nav-p-32 {
@@ -77,6 +82,12 @@ a {
 .row-btw {
     display: flex;
     justify-content: space-between;
+}
+
+.row-end {
+    display: flex;
+    justify-content: end;
+    align-items: end;
 }
 
 .row-btw-center {
@@ -123,63 +134,54 @@ a.btn {
     color: $dark-text-color;
 }
 
+.btn-group {
+    display: inline-flex;
+    align-items: stretch;
+    color: $primary-gray-color;
+    font: normal normal normal 18px/27px Roboto;
+
+    a {
+        color: $primary-gray-color;
+        display: block;
+        border: 1px solid $primary-gray-color;
+        padding: 11px 16px;
+    }
+
+    li:first-child a, li:last-child a{
+        font: normal normal normal 19px/29px "Noto Sans";
+        padding: 10px 12px;
+    }
+
+    .selected a{
+        background: #000;
+        color: #ffffff;
+    }
+    li:hover a {
+        background: $secondary-background-color;
+    }
+}
+
 /* font & padding & margin styles */
-.fnt-36-l-54 {
-    font-size: 36px;
-    line-height: 54px;
-}
+$properties: (
+    "mt" : margin-top,
+    "mb" : margin-bottom,
+    "ml" : margin-left,
+    "mr" : margin-right,
+    "pt" : padding-top,
+    "pb" : padding-bottom,
+    "pl" : padding-left,
+    "pr" : padding-right,
+    "lh" : line-height,
+    "fz" : font-size,
+);
 
-.fnt-20-l-30 {
-    font: normal normal normal 20px/30px Noto Sans;
-}
-
-.fnt-16-l-24 {
-    font: normal normal normal 16px/24px Roboto;
-}
-
-.fnt-14-l-21 {
-    font-size: 14px;
-    line-height: 21px;
-}
-
-.pt-24 {
-    padding-top: 24px;
-}
-
-.pt-18 {
-    padding-top: 18px;
-}
-
-.pb-16 {
-    padding-bottom: 16px;
-}
-
-.mt-8 {
-    margin-top: 8px;
-}
-
-.mt-40 {
-    margin-top: 40px;
-}
-
-.mr-24 {
-    margin-right: 24px;
-}
-
-.mr-38 {
-    margin-right: 38px;
-}
-
-.mb-4 {
-    margin-bottom: 4px;
-}
-
-.mb-20 {
-    margin-bottom: 20px;
-}
-
-.mb-42 {
-    margin-bottom: 42px;
+@each $key, $value in $properties {
+    @for $i from 1 through 50 {
+        $size: $i * 2;
+        .#{$key}-#{$size} {
+            #{$value}: #{$size}px;
+        }
+    }
 }
 
 .mb-104 {
@@ -219,6 +221,10 @@ a.btn {
     height: 100%;
 }
 
+.fill-vertical {
+    max-height: 100%;
+}
+
 /* icons */
 .logo {
     content: url("https://hexschool.github.io/webLayoutTraining1st/week3/logo.png");
@@ -249,11 +255,19 @@ a.btn {
     }
 }
 
-.icon-sm {
+@mixin icon($size) {
     display: inline-block;
     vertical-align: middle;
-    height: 21px;
-    width: 21px; 
+    height: #{$size}px;
+    width: #{$size}px; 
+}
+
+.icon-20 {
+    @include icon(20);
+}
+
+.icon-24 {
+    @include icon(24);
 }
 
 .icon {
@@ -302,6 +316,10 @@ a.btn {
     background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-clock-black.svg");
 }
 
+.icon-search {
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-search.svg");
+}
+
 .brown-sqrt {
     @include sqrt(24px);
     background: $supportive-color-brown;
@@ -333,6 +351,7 @@ a.btn {
 
     /* pic banner */
     .pic-banner {
+        margin-bottom: 0;
         h1 {
             font: normal normal bold 48px/80px "Noto Sans";
         }
@@ -361,8 +380,11 @@ a.btn {
      .list-gap-16 {
          @include list-gap(8px);
      }
-     .nap-p-64 {
+     .nav-p-64 {
          @include nav(40px);
+     }
+     .nav-p-48 {
+         @include nav(32px);
      }
      .nav-p-32 {
          @include nav(24px);
@@ -427,6 +449,9 @@ a.btn {
     .mb-304 {
         margin-bottom: 56px;
     }
+    .mb-36 {
+        margin-bottom: 12px;
+    }
 
     /* fonts */
     .fnt-16-l-24 {
@@ -446,6 +471,14 @@ a.btn {
    
     .not-small {
         display: none;
+    }
+
+    /* botton */
+    .btn-group {
+        font: normal normal normal 11px/17px Roboto;
+        li:first-child a, li:last-child a{
+            font: normal normal normal 12px/19px Roboto;
+        }
     }
 }
 

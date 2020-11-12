@@ -1,0 +1,51 @@
+.question-section {
+    padding-top: 40px;
+    h2 {
+        font: normal normal bold 32px/45px "Noto Sans";
+    }
+}
+
+.question-list {
+    @include list-gap(40px);
+    h3 {
+        font: normal normal bold 20px/23px "Noto Sans";
+        margin-bottom: 16px;
+    }
+    p {
+        font: normal normal normal 16px/24px "Noto Sans";
+        margin-left: 95px;
+    }
+}
+
+/* ------ for tablet ----- */
+@media screen and (max-width: 992px) {
+    .question-list {
+        p {
+            margin-left: 59px;
+        }
+    }
+}
+
+/* for smartphone */
+@media screen and (max-width: 768px) {
+    
+    .question-section {
+        padding-top: 24px;
+        h2 {
+            font-size: 20px;
+        }
+    }
+
+    .question-list {
+        @include list-gap(20px);
+        h3 {
+            font-size: 16px;
+            line-height: 24px; 
+            margin-bottom: 12px;
+        }
+        p {
+            font-size: 14px;
+            margin-left: 0;
+        }
+    }
+}
