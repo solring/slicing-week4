@@ -75,7 +75,13 @@ a {
     align-items: center;
 }
 
+.row-start-end {
+    display: flex;
+    align-items: center;
+}
+
 .row-reverse {
+    display: flex;
     flex-direction: row-reverse;
 }
 
@@ -99,6 +105,11 @@ a {
 .row-start-bottom {
     display: flex;
     align-items: end;
+}
+
+.row-wrap {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* list gaps */
@@ -318,6 +329,25 @@ $properties: (
 
 .icon-search {
     background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-search.svg");
+}
+
+.icon-fb{
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/logo-facebook.svg");
+}
+.icon-ig {
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/logo-instagram.svg");
+}
+
+.icon-tag {
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-tag.svg");
+}
+
+.icon-undo {
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-undo.svg");
+}
+
+.icon-redo {
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-redo.svg");
 }
 
 .brown-sqrt {

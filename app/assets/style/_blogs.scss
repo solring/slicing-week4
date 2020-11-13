@@ -59,11 +59,97 @@
     }
 }
 
+.tags {
+    color: $primary-theme-color;
+    font: normal normal bold 24px/36px Roboto;
+    a {
+        color: $primary-theme-color;
+    }
+    .title {
+        font: normal normal bold 28px/42px Roboto;
+        margin-bottom: 12px;
+    }
+}
+
+.tag-list {
+    &>li {
+        margin-right: 24px;
+        margin-bottom: 8px;
+    }
+}
+
+.tag-list-row {
+    &>li {
+        margin-right: 24px;
+    }
+}
+
+.breadcrumb {
+    font: normal normal normal 16px/21px "Noto Sans";
+    .current {
+        color: $primary-theme-color;
+    }
+}
+
+.blog-artical {
+    font: normal normal bold 20px/30px "Noto Sans";
+    img {
+        width: 100%;
+        margin-bottom: 24px;
+    }
+
+    .left {
+        width: 74%;
+        margin-right: 30px;
+    }
+    .right {
+        width: 24%;
+    }
+
+    h2 {
+        font: normal normal normal 48px/67px "Noto Sans";
+    }
+    h3 {
+        font: normal normal 500 28px/42px Roboto;
+    }
+    p {
+        font: normal normal bold 20px/30px "Noto Sans";
+        margin-bottom: 36px;
+        opacity: 0.6;
+    }
+    
+    .date {
+        font: normal normal 500 16px/24px Roboto;
+        opacity: 0.7;
+    }
+    .subtitle {
+        margin-bottom: 23px;
+    }
+}
+
+.artical-footer {
+    color: #0A0A0A;
+    .footer-lower {
+        font: normal normal normal 19px/30px Noto Sans;
+        border-top: 1px solid #707070;
+        padding-top: 24px;
+        margin-top: 16px;
+
+        li:first-child .icon-24 {
+            margin-right: 8px;
+        }
+        li:last-child .icon-24 {
+            margin-left: 8px;
+        }
+    }
+}
+
 /* ------ for tablet ----- */
 @media screen and (max-width: 992px) {
     .blog-header {
         font-size: 16px;
     }
+
     .blog-list {
         @include list-gap(32px);
         padding-top: 40px;
@@ -96,11 +182,76 @@
             margin-bottom: 16px;
         }
     }
+    .breadcrumb {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    .tags {
+        font-size: 16px;
+        line-height: 20px;
+        .icon {
+            margin-right: 0;
+        }
+        .title {
+           font-size: 20px; 
+           line-height: 26px;
+           margin-bottom: 6px;
+        }
+    }
+    .tag-list {
+        &>li {
+            margin-bottom: 0;
+        }
+    }
+
+    .blog-artical {
+        img {
+            margin-bottom: 16px;
+        }
+        h2 {
+            font-size: 32px;
+        }
+        h3 {
+            font-size: 16px;
+        }
+        .date{
+            font-size: 14px;
+        }
+        p {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 24px;
+        }
+        .subtitle {
+            margin-bottom: 16px;
+        }
+    }
+
+    .artical-footer {
+        font-size: 16px;
+        margin-bottom: 31px;
+
+        .footer-lower {
+            padding-top: 16px;
+            font-size: 14px;
+
+            li {
+                margin-bottom: 8px;
+            }
+        }
+        .icon-24 {
+            width: 20px;
+            height: 20px;
+        }
+    }
 }
 
 /* for smartphone */
 @media screen and (max-width: 768px) {
-
+    .blog-header {
+        @include nav(24px);
+    }
     .blog-list {
         @include list-gap(26px);
         padding-top: 24px;
@@ -120,6 +271,46 @@
         }
         .subtitle {
             margin-bottom: 0;
+        }
+    }
+
+    .tags {
+        .icon {
+            width: 24px;
+            height: 24x;
+        }
+    }
+    .blog-artical {
+        flex-direction: column;
+        .left {
+            width: 100%;
+            margin-right: 0;
+        }
+        .right {
+            width: 100%;
+        }
+    }
+
+    .artical-footer {
+        .footer-lower {
+            flex-direction: column;
+            align-items: start;
+
+            padding-top: 8px;
+
+            .row-reverse {
+                flex-direction: row;
+            }
+
+            li:last-child .icon-24 {
+                margin-left: 0;
+                margin-right: 8px;
+            }
+        }
+
+        .icon-24 {
+            width: 14px;
+            height: 14px;
         }
     }
 }
