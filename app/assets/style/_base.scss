@@ -338,12 +338,14 @@ $properties: (
     }
 
     /* display control */
+    // add !important fo prevent further styles settings
+    // overriding final RWD operations
     .small-only {
-        display: block;
+        display: block !important;
     }
    
     .not-small {
-        display: none;
+        display: none !important;
     }
 
     /* botton */
