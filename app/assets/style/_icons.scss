@@ -1,0 +1,163 @@
+
+/* icons */
+.logo {
+    content: url("https://hexschool.github.io/webLayoutTraining1st/week3/logo.png");
+    display: inline-block;
+    vertical-align: middle;
+    h1 {
+        padding-left: 101%;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+}
+.logo-small {
+    content: url("https://hexschool.github.io/webLayoutTraining1st/week3/logo.png");
+    display: inline-block;
+    vertical-align: middle;
+    width: 46px;
+}
+
+.icon-title {
+    img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 17px;
+    }
+
+    .icon {
+        margin-right: 17px;
+    }
+}
+
+@mixin icon($size) {
+    display: inline-block;
+    vertical-align: middle;
+    height: #{$size}px;
+    width: #{$size}px; 
+}
+
+.icon-20 {
+    @include icon(20);
+}
+
+.icon-24 {
+    @include icon(24);
+}
+
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+    height: 48px;
+    width: 48px;
+}
+
+.icon-lg {
+    display: inline-block;
+    vertical-align: middle;
+    height: 64px;
+    width: 64px;
+}
+
+.icon-diamond {
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-diamond.svg");
+}
+
+.icon-sun {
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-sun.svg");
+}
+
+.icon-thunder {
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-thunder.svg");
+}
+
+.icon-location{
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-location.svg");
+}
+
+.icon-question{
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-help.svg");
+}
+
+.icon-phone {
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-phone-black.svg");
+}
+
+.icon-map {
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-phone-black.svg");
+}
+
+.icon-clock {
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-clock-black.svg");
+}
+
+.icon-search {
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-search.svg");
+}
+
+.icon-fb{
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/logo-facebook.svg");
+}
+.icon-ig {
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/logo-instagram.svg");
+}
+
+.icon-tag {
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-tag.svg");
+}
+
+.icon-undo {
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-undo.svg");
+}
+
+.icon-redo {
+    background: center / contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-redo.svg");
+}
+
+.brown-sqrt {
+    @include sqrt(24px);
+    background: $supportive-color-brown;
+}
+
+.orange-sqrt {
+    @include sqrt(24px);
+    background: $supportive-color-orange;
+}
+
+/* ------ for tablet ----- */
+@media screen and (max-width: 992px) {
+    .icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .icon-sm {
+        width: 20px;
+        height: 20px;
+    }
+
+    .icon-lg {
+        width: 48px;
+        height: 48px;
+    }
+
+}
+
+/* for smartphone */
+@media screen and (max-width: 768px) {
+    .icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .brown-sqrt, .orange-sqrt {
+        width: 16px;
+        height: 16px;
+        margin-right: 4px;
+    }
+
+    .icon-title {
+        img, .icon {
+            margin-right: 5px;
+        }
+    }
+}
