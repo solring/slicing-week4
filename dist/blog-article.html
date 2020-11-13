@@ -1,11 +1,42 @@
----
-title: 部落格-文章內容 
-layout: ./app/layout-blog.ejs
-engine: ejs
-current: blog-article
-options: 
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>部落格-文章內容</title>
+  <link rel="stylesheet" href="assets/style/style.css">
+</head>
+<body>
+  <div class="header primary-theme">
+  <div class="header-inner row-btw-center">
+    <a href="./index.html">
+      <div class="logo">
+        <h1>Hex Glasses</h1>
+      </div>
+    </a>
+    <ul class="nav nav-p-64 fz-20 lh-30">
+      <li><a href="./optical.html">系列鏡框</a></li>
+      <li><a href="./stores.html">門市據點</a></li>
+      <li><a href="./blogs.html">部落格</a></li>
+      <li><a href="./questions.html">常見問題</a></li>
+    </ul>
+  </div>
+</div>
+  
+  
+<div class="blog-header primary-theme ">
+  <div class="container row-btw-center">
+    <ul class="nav nav-p-48">
+      <li><a href="#">最新消息</a></li>
+      <li><a href="#">特別企劃</a></li>
+      <li><a href="#">新品上市</a></li>
+      <li><a href="#">鏡框小知識</a></li>
+    </ul>
+    <div class="icon-24 icon-search not-small"></div>
+  </div>
+</div>  
 
+  
 <div class="container">
   <div class="breadcrumb mt-8 mb-18">
     首頁 / 部落格 / 特別企劃 / <span class="current">情人節特別企劃</span>
@@ -87,3 +118,54 @@ options:
   </div>
 
 </div>
+
+  <div class="footer primary-theme">
+  <div class="container">
+    <div class="footer-upper">
+      <div class="row-btw-center">
+        <ul class="menu nav-p-64 fz-16 lh-24">
+          <li><a href="./index.html">首頁</a></li>
+          <li><a href="./optical.html">系列鏡框</a></li>
+          <li><a href=".stores.html">門市據點</a></li>
+          <li><a href="./blogs.html">部落格</a></li>
+          <li><a href="./questions.html">常見問題</a></li>
+        </ul>
+
+        <ul class="icon-list nav-p-32">
+          <li><a href="https://facebook.com"><img src="https://hexschool.github.io/webLayoutTraining1st/week3/icon-fb.svg" alt="facebook icon"></a></li>
+          <li><a href="https://instagram.com"><img src="https://hexschool.github.io/webLayoutTraining1st/week3/icon-ig.svg" alt="instagram icon"></a></li>
+          <li><a href="https://line.me"><img src="https://hexschool.github.io/webLayoutTraining1st/week3/icon-line.svg" alt="line icon"></a></li>
+        </ul>
+      </div>
+      
+      <ul class="contact">
+        <li class="icon-title">
+          
+            <img src="https://hexschool.github.io/webLayoutTraining1st/week3/icon-phone.svg" alt="icon phone">
+            <a href="tel:0800-000-000">0800-000-000</a>
+          
+        </li>
+        <li class="icon-title">
+            <img src="https://hexschool.github.io/webLayoutTraining1st/week3/icon-mail.svg" alt="icon mail">
+            <a href="mailto:glasses@business.com">glasses@business.com</a>
+        </li>
+      </ul>
+      
+    </div>
+    
+    <div class="footer-bottom-wrap upper-line pt-24">
+      <div class="logo large-only mr-38"></div>
+      <div class="footer-bottom fz-16 lh-24">
+        Copyright © 2020 Glasses.All rights reserved.
+        <ul class="nav nav-p-64 fz-14 lh-24">
+          <li class="mt-8"><a href="">隱私權政策</a></li>
+          <li class="mt-8 mb-4"><a href="">服務條款</a></li>
+        </ul>
+      </div>
+      <div class="logo-small small-only"></div>
+    </div>
+    
+  </div>
+</div>  
+</body>
+</html>
