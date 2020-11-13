@@ -21,13 +21,13 @@
     }
 
     .price {
-        color: $secondary-text-color;
-        font: normal normal 500 $font/$line_height Roboto;
+        color: $primary-theme-color;
+        font: normal normal 500 #{$font}/#{$line_height} Roboto;
         margin-bottom: 8px;
     }
 
     .name {
-        font: normal normal normal $font/$line_height Roboto;
+        font: normal normal normal #{$font}/#{$line_height} Roboto;
         margin-bottom: 11px;
     } 
 }
@@ -124,6 +124,9 @@
         @include wrap-n-column(2, 30, 690);
         li {
             margin-bottom: 72px;
+        }
+        .pic-container {
+            height: 164px;
         }
     }
 
