@@ -41,7 +41,7 @@
 @mixin wrap-n-column($n, $gap, $total: 1) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
     $ratio: ($total - $n * $gap) / ($n * $total); 
     $width : unquote( $ratio * 100 + '%' );
     &>li {

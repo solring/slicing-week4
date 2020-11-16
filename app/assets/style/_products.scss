@@ -35,10 +35,10 @@
 .product-tabs {
     max-width: 1386px;
     margin: 0 auto;
-    font: normal normal 500 42px/63px Roboto;
+    font: normal normal 500 42px/55px Roboto;
     font-variant-caps: all-petite-caps;
     li {
-        padding: 24px auto;
+        padding: 24px 0;
         border: 1px solid $secondary-gray-color;
         width: 34%;
         &.selected {
@@ -85,6 +85,7 @@
     // disalbe row-btw-center
     .row-btw-center {
         flex-direction: column;
+        justify-content: center;
         align-items: start;
     }
 } 
@@ -98,7 +99,7 @@
         font-variant-caps: all-petite-caps;
 
         li {
-            padding: 16px auto;
+            padding: 16px 0;
             &.selected {
                 border-bottom: 8px solid $primary-theme-color;
             }
@@ -151,7 +152,7 @@
         font-variant-caps: all-petite-caps;
 
         li {
-            padding: 8px auto;
+            padding: 8px 0;
             &.selected {
                 border-bottom: 4px solid $primary-theme-color;
             }
