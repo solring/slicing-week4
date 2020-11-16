@@ -1,9 +1,11 @@
 @mixin nav($gap: 0) {
     display: flex;
     li {
-        margin-right: $gap;
-        &:last-child {
-            margin-right: 0;
+        a {
+            padding-right: $gap;
+        }
+        &:last-child a{
+            padding-right: 0;
         }
     }
 }
