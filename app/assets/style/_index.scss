@@ -54,6 +54,15 @@
   .profile-pic {
       width: 57%;
   }
+
+  a:hover {
+      .icon-title {
+        color: $primary-color-dark;
+      }
+      img {
+          opacity: 0.7;
+      }
+  }
 }
 
 .recommend-list {
@@ -144,6 +153,15 @@
       // Therefore we have to disable word wrapping.
       white-space: nowrap;
       z-index: 100;
+  }
+
+  &:hover {
+      h3 {
+          color: $dark-text-color;
+      }
+      .overlay {
+          display: none;
+      }
   }
 }
 

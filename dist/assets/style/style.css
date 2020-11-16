@@ -321,12 +321,16 @@ a.btn {
   border: none;
   background-color: #AA0601;
   color: #ffffff; }
+  .btn-primary:hover {
+    background-color: #650300; }
 
 .btn-black {
   display: block;
   border: none;
   background-color: #000000;
   color: #ffffff; }
+  .btn-black:hover {
+    background-color: #AA0601; }
 
 .btn-group {
   display: inline-flex;
@@ -2101,6 +2105,12 @@ a.btn {
 .product-list .profile-pic {
   width: 57%; }
 
+.product-list a:hover .icon-title {
+  color: #650300; }
+
+.product-list a:hover img {
+  opacity: 0.7; }
+
 .recommend-list li {
   width: 23%;
   margin-bottom: 30px; }
@@ -2167,6 +2177,10 @@ a.btn {
     transform: translate(-50%, -50%);
     white-space: nowrap;
     z-index: 100; }
+  .img-btn:hover h3 {
+    color: #ffffff; }
+  .img-btn:hover .overlay {
+    display: none; }
 
 /* titles */
 .section-title {
@@ -2288,11 +2302,13 @@ a.btn {
   font: normal normal 500 42px/55px Roboto;
   font-variant-caps: all-petite-caps; }
   .product-tabs li {
-    padding: 24px 0;
     border: 1px solid #DCDCDC;
     width: 34%; }
-    .product-tabs li.selected {
+    .product-tabs li.selected, .product-tabs li:hover {
       border-bottom: 16px solid #AA0601; }
+    .product-tabs li a {
+      padding: 24px 0;
+      display: block; }
 
 .product-banner {
   height: 309px; }
@@ -2333,6 +2349,8 @@ a.btn {
   .product-item-list-4r li {
     margin-bottom: 104px;
     text-align: left; }
+    .product-item-list-4r li:hover img, .product-item-list-4r li:hover .price, .product-item-list-4r li:hover .name {
+      opacity: 0.7; }
   .product-item-list-4r .pic-container {
     width: 100%;
     height: 164px;
@@ -2357,6 +2375,8 @@ a.btn {
   .product-item-list-3r li {
     margin-bottom: 112px;
     text-align: left; }
+    .product-item-list-3r li:hover img, .product-item-list-3r li:hover .price, .product-item-list-3r li:hover .name {
+      opacity: 0.7; }
   .product-item-list-3r .pic-container {
     width: 100%;
     height: 224px;
@@ -2477,7 +2497,7 @@ a.btn {
     margin-bottom: 8px; }
     .store-detail li:last-child {
       margin-bottom: 0; }
-  .store-detail .icon, .store-detail .icon-sm, .store-detail .icon-lg {
+  .store-detail .icon, .store-detail .icon-sm, .store-detail .icon-lg, .store-detail .icon-20, .store-detail .icon-24 {
     margin-top: 5px;
     margin-right: 12px; }
 
@@ -2671,6 +2691,8 @@ a.btn {
     right: 0;
     font: normal normal 900 36px/54px "Noto Sans";
     color: #650300; }
+    .blog-list .more:hover {
+      color: #AA0601; }
 
 .tags {
   color: #AA0601;
@@ -2720,7 +2742,7 @@ a.btn {
 .artical-footer {
   color: #0A0A0A; }
   .artical-footer .footer-lower {
-    font: normal normal normal 19px/30px Noto Sans;
+    font: normal normal normal 19px/30px "Noto Sans";
     border-top: 1px solid #707070;
     padding-top: 24px;
     margin-top: 16px; }
@@ -2815,6 +2837,8 @@ a.btn {
         margin-bottom: 0; }
     .blog-list img {
       width: 100%; }
+      .blog-list img:hover {
+        opacity: 0.7; }
     .blog-list > li {
       flex-direction: column; }
     .blog-list h2 {

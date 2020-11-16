@@ -148,6 +148,9 @@ a.btn {
     border: none;
     background-color: $primary-theme-color;
     color: $dark-text-color;
+    &:hover {
+        background-color: $primary-color-dark;
+    }
 }
 
 .btn-black{
@@ -155,6 +158,9 @@ a.btn {
     border: none;
     background-color: #000000;
     color: $dark-text-color;
+    &:hover {
+        background-color: $primary-theme-color;
+    }
 }
 
 .btn-group {

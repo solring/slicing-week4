@@ -56,6 +56,9 @@
         right: 0;
         font: normal normal 900 36px/54px "Noto Sans";
         color: $secondary-text-color;
+        &:hover {
+            color: $primary-theme-color;
+        }
     }
 }
 
@@ -130,7 +133,7 @@
 .artical-footer {
     color: #0A0A0A;
     .footer-lower {
-        font: normal normal normal 19px/30px Noto Sans;
+        font: normal normal normal 19px/30px "Noto Sans";
         border-top: 1px solid #707070;
         padding-top: 24px;
         margin-top: 16px;
@@ -258,6 +261,9 @@
 
         img {
             width: 100%;
+            &:hover {
+                opacity: 0.7;
+            }
         }
 
         &>li {

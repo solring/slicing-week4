@@ -45,17 +45,11 @@
 }
 
 .icon {
-    display: inline-block;
-    vertical-align: middle;
-    height: 48px;
-    width: 48px;
+    @include icon(48);
 }
 
 .icon-lg {
-    display: inline-block;
-    vertical-align: middle;
-    height: 64px;
-    width: 64px;
+    @include icon(64);
 }
 
 .icon-diamond {

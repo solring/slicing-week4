@@ -39,7 +39,7 @@
     padding-bottom: 16px;
     @include list-gap(8px);
 
-    .icon, .icon-sm, .icon-lg {
+    .icon, .icon-sm, .icon-lg, .icon-20, .icon-24{
         margin-top: 5px; //(30-20)/2
         margin-right: 12px;
     }
