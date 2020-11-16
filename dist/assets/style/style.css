@@ -2068,7 +2068,7 @@ a.btn {
   display: inline-block;
   text-align: right;
   color: #650300; }
-  .title-box h2 {
+  .title-box h1 {
     font: normal normal bold 64px/96px "Noto Sans"; }
   .title-box h3 {
     font: normal normal normal 36px/54px "Noto Sans"; }
@@ -2318,7 +2318,7 @@ a.btn {
 
 .product-details {
   padding-top: 88px; }
-  .product-details h2 {
+  .product-details h1 {
     font: normal normal 500 42px/63px Roboto; }
   .product-details h3 {
     font: normal normal normal 32px/48px "Noto Sans"; }
