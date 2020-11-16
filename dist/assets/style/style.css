@@ -265,6 +265,11 @@ a {
   display: flex;
   flex-direction: row-reverse; }
 
+.row-reverse-center {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center; }
+
 .row-btw {
   display: flex;
   justify-content: space-between; }
@@ -2062,12 +2067,7 @@ a.btn {
 .banner {
   height: calc(100vh - 108px);
   background: url("https://hexschool.github.io/webLayoutTraining1st/week3/banner.png") center;
-  background-size: cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: end;
-  padding-right: 10%; }
+  background-size: cover; }
 
 .title-box {
   display: inline-block;
@@ -2232,8 +2232,6 @@ a.btn {
   .banner {
     background: url("https://hexschool.github.io/webLayoutTraining1st/week3/banner-sm.png") center;
     background-size: cover;
-    align-items: end;
-    padding-right: 5%;
     height: 394px; }
   .title-box h2 {
     font: normal normal bold 32px/72px "Noto Sans"; }

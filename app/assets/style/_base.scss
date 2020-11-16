@@ -85,6 +85,12 @@ a {
     flex-direction: row-reverse;
 }
 
+.row-reverse-center {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
 .row-btw {
     display: flex;
     justify-content: space-between;
