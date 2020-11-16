@@ -1,0 +1,58 @@
+/* font & padding & margin styles */
+$properties: (
+    "mt" : margin-top,
+    "mb" : margin-bottom,
+    "ml" : margin-left,
+    "mr" : margin-right,
+    "pt" : padding-top,
+    "pb" : padding-bottom,
+    "pl" : padding-left,
+    "pr" : padding-right,
+    "lh" : line-height,
+    "fz" : font-size,
+);
+
+@each $key, $value in $properties {
+    @for $i from 1 through 50 {
+        $size: $i * 2;
+        .#{$key}-#{$size} {
+            #{$value}: #{$size}px;
+        }
+    }
+}
+
+.mb-104 {
+    margin-bottom: 104px;
+}
+
+.mb-304 {
+    margin-bottom: 304px;
+}
+
+/* ------ for tablet ----- */
+@media screen and (max-width: 992px) {
+    
+     .mt-40 {
+         margin-top: 32px;
+     }
+     .mb-42 {
+         margin-bottom: 24px;
+     }
+     .mb-304 {
+         margin-bottom: 104px;
+     }
+}
+
+/* for smartphone */
+@media screen and (max-width: 768px) {
+    /* padding & margin */
+    .mb-104 {
+        margin-bottom: 56px;
+    }
+    .mb-304 {
+        margin-bottom: 56px;
+    }
+    .mb-36 {
+        margin-bottom: 12px;
+    }
+}

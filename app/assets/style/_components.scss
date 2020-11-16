@@ -1,0 +1,214 @@
+/* container */
+.container {
+    margin: 0 auto;
+    max-width: 1110px;
+    @include pad {
+        max-width: 690px;
+    }
+    @include phone {
+        max-width: 345px; 
+    }
+}
+
+.container-p30 {
+    max-width: 1140px; // including margin for flex wrapping
+    margin: 0 auto;
+    @include pad {
+        max-width: 720px;
+    }
+    @include phone {
+        max-width: 345px; 
+    }
+}
+
+.container-sm {
+    max-width: 730px;
+    margin: 0 auto;
+    @include pad {
+        max-width: 450px;
+    }
+    @include phone {
+        max-width: 345px; 
+    }
+}
+
+.pic-banner{
+    background: center / cover no-repeat url("../images/pic-banner.png");
+    height: 304px;
+    h1 {
+        font: normal normal bold 64px/80px "Noto Sans";
+    }
+    padding-bottom: 8px;
+
+    @include pad {
+        margin-bottom: 0;
+        h1 {
+            font: normal normal bold 48px/80px "Noto Sans";
+        }
+    }
+}
+
+/* navs */
+.nav-p-64 {
+    @include nav(64px);
+    @include pad{
+        @include nav(40px);
+    }
+}
+
+.nav-p-48 {
+    @include nav(48px);
+    @include pad{
+        @include nav(32px);
+    }
+}
+
+.nav-p-32 {
+    @include nav(32px);
+    @include pad{
+        @include nav(24px);
+    }
+}
+
+.nav-p-30 {
+    @include nav(30px);
+    @include pad{
+        @include nav;
+    }
+}
+
+.nav-p-0 {
+    @include nav;
+}
+
+/* layouts */
+.row {
+    display: flex;
+}
+
+.row-start-center {
+    display: flex;
+    align-items: center;
+}
+
+.row-start-end {
+    display: flex;
+    align-items: center;
+}
+
+.row-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.row-reverse-center {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.row-btw {
+    display: flex;
+    justify-content: space-between;
+}
+
+.row-btw-baseline {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.row-end {
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+}
+
+.row-btw-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.row-start-bottom {
+    display: flex;
+    align-items: flex-end;
+}
+
+.row-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* list gaps */
+.list-gap-32 {
+    @include list-gap(32px);
+    @include pad {
+        @include list-gap(8px);
+    }
+}
+
+.list-gap-16 {
+    @include list-gap(16px);
+    @include pad {
+        @include list-gap(8px);
+    }
+}
+
+/* buttons */
+a.btn {
+    display: block;
+}
+
+.btn {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.btn-primary {
+    display: block;
+    border: none;
+    background-color: $primary-theme-color;
+    color: $dark-text-color;
+    &:hover {
+        background-color: $primary-color-dark;
+    }
+}
+
+.btn-black{
+    display: block;
+    border: none;
+    background-color: #000000;
+    color: $dark-text-color;
+    &:hover {
+        background-color: $primary-theme-color;
+    }
+}
+
+.btn-group {
+    display: inline-flex;
+    align-items: stretch;
+    color: $primary-gray-color;
+    font: normal normal normal 18px/27px Roboto;
+
+    a {
+        color: $primary-gray-color;
+        display: block;
+        border: 1px solid $primary-gray-color;
+        padding: 11px 16px;
+    }
+
+    li:first-child a, li:last-child a{
+        font: normal normal normal 19px/29px "Noto Sans";
+        padding: 10px 12px;
+    }
+
+    .selected a{
+        background: #000;
+        color: #ffffff;
+    }
+    li:hover a {
+        background: $secondary-background-color;
+    }
+}
+

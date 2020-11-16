@@ -1,357 +1,6 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+/* font & padding & margin styles */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;700;900&display=swap");
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-/* ------- End of CSS reset -------- */
-/* icons */
-.logo {
-  content: url("https://hexschool.github.io/webLayoutTraining1st/week3/logo.png");
-  display: inline-block;
-  vertical-align: middle; }
-  .logo h1 {
-    padding-left: 101%;
-    overflow: hidden;
-    white-space: nowrap; }
-
-.logo-small {
-  content: url("https://hexschool.github.io/webLayoutTraining1st/week3/logo.png");
-  display: inline-block;
-  vertical-align: middle;
-  width: 46px; }
-
-.icon-title img {
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 17px; }
-
-.icon-title .icon {
-  margin-right: 17px; }
-
-.icon-20 {
-  display: inline-block;
-  vertical-align: middle;
-  height: 20px;
-  width: 20px; }
-
-.icon-24 {
-  display: inline-block;
-  vertical-align: middle;
-  height: 24px;
-  width: 24px; }
-
-.icon {
-  display: inline-block;
-  vertical-align: middle;
-  height: 48px;
-  width: 48px; }
-
-.icon-lg {
-  display: inline-block;
-  vertical-align: middle;
-  height: 64px;
-  width: 64px; }
-
-.icon-diamond {
-  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-diamond.svg"); }
-
-.icon-sun {
-  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-sun.svg"); }
-
-.icon-thunder {
-  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-thunder.svg"); }
-
-.icon-location {
-  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-location.svg"); }
-
-.icon-question {
-  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-help.svg"); }
-
-.icon-phone {
-  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-phone-black.svg"); }
-
-.icon-map {
-  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-phone-black.svg"); }
-
-.icon-clock {
-  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-clock-black.svg"); }
-
-.icon-search {
-  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-search.svg"); }
-
-.icon-fb {
-  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/logo-facebook.svg"); }
-
-.icon-ig {
-  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/logo-instagram.svg"); }
-
-.icon-tag {
-  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-tag.svg"); }
-
-.icon-undo {
-  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-undo.svg"); }
-
-.icon-redo {
-  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-redo.svg"); }
-
-.brown-sqrt {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  border-radius: 4px;
-  margin-right: 8px;
-  background: #5F3E2D; }
-
-.orange-sqrt {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  border-radius: 4px;
-  margin-right: 8px;
-  background: #B75929; }
-
-/* ------ for tablet ----- */
-@media screen and (max-width: 992px) {
-  .icon {
-    width: 32px;
-    height: 32px; }
-  .icon-sm {
-    width: 20px;
-    height: 20px; }
-  .icon-lg {
-    width: 48px;
-    height: 48px; } }
-
-/* for smartphone */
-@media screen and (max-width: 768px) {
-  .icon {
-    width: 14px;
-    height: 14px; }
-  .brown-sqrt, .orange-sqrt {
-    width: 16px;
-    height: 16px;
-    margin-right: 4px; }
-  .icon-title img, .icon-title .icon {
-    margin-right: 5px; } }
-
-/* base */
-img {
-  display: block;
-  max-width: 100%; }
-
-*, *:before, *:after {
-  box-sizing: border-box; }
-
-:root {
-  font-family: "Roboto", "Noto Sans"; }
-
-a {
-  text-decoration: none;
-  color: #111619; }
-
-/* container */
-.container {
-  max-width: 1110px;
-  margin: 0 auto; }
-
-.container-p30 {
-  max-width: 1140px;
-  margin: 0 auto; }
-
-.container-sm {
-  max-width: 730px;
-  margin: 0 auto; }
-
-.pic-banner {
-  background: center/cover no-repeat url("../images/pic-banner.png");
-  height: 304px;
-  padding-bottom: 8px; }
-  .pic-banner h1 {
-    font: normal normal bold 64px/80px "Noto Sans"; }
-
-/* navs */
-.nav-p-64 {
-  display: flex; }
-  .nav-p-64 li {
-    margin-right: 64px; }
-    .nav-p-64 li:last-child a {
-      margin-right: 0; }
-
-.nav-p-48 {
-  display: flex; }
-  .nav-p-48 li {
-    margin-right: 48px; }
-    .nav-p-48 li:last-child a {
-      margin-right: 0; }
-
-.nav-p-32 {
-  display: flex; }
-  .nav-p-32 li {
-    margin-right: 32px; }
-    .nav-p-32 li:last-child a {
-      margin-right: 0; }
-
-.nav-p-30 {
-  display: flex; }
-  .nav-p-30 li {
-    margin-right: 30px; }
-    .nav-p-30 li:last-child a {
-      margin-right: 0; }
-
-.nav-p-0 {
-  display: flex; }
-  .nav-p-0 li {
-    margin-right: 0; }
-    .nav-p-0 li:last-child a {
-      margin-right: 0; }
-
-/* layouts */
-.row {
-  display: flex; }
-
-.row-start-center {
-  display: flex;
-  align-items: center; }
-
-.row-start-end {
-  display: flex;
-  align-items: center; }
-
-.row-reverse {
-  display: flex;
-  flex-direction: row-reverse; }
-
-.row-reverse-center {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center; }
-
-.row-btw {
-  display: flex;
-  justify-content: space-between; }
-
-.row-btw-baseline {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline; }
-
-.row-end {
-  display: flex;
-  justify-content: end;
-  align-items: flex-end; }
-
-.row-btw-center {
-  display: flex;
-  justify-content: space-between;
-  align-items: center; }
-
-.row-start-bottom {
-  display: flex;
-  align-items: flex-end; }
-
-.row-wrap {
-  display: flex;
-  flex-wrap: wrap; }
-
-/* list gaps */
-.list-gap-32 li {
-  margin-bottom: 32px; }
-  .list-gap-32 li:last-child {
-    margin-bottom: 0; }
-
-.list-gap-16 li {
-  margin-bottom: 16px; }
-  .list-gap-16 li:last-child {
-    margin-bottom: 0; }
-
-/* buttons */
-a.btn {
-  display: block; }
-
-.btn {
-  text-align: center;
-  margin: 0 auto; }
-
-.btn-primary {
-  display: block;
-  border: none;
-  background-color: #AA0601;
-  color: #ffffff; }
-  .btn-primary:hover {
-    background-color: #650300; }
-
-.btn-black {
-  display: block;
-  border: none;
-  background-color: #000000;
-  color: #ffffff; }
-  .btn-black:hover {
-    background-color: #AA0601; }
-
-.btn-group {
-  display: inline-flex;
-  align-items: stretch;
-  color: #555555;
-  font: normal normal normal 18px/27px Roboto; }
-  .btn-group a {
-    color: #555555;
-    display: block;
-    border: 1px solid #555555;
-    padding: 11px 16px; }
-  .btn-group li:first-child a, .btn-group li:last-child a {
-    font: normal normal normal 19px/29px "Noto Sans";
-    padding: 10px 12px; }
-  .btn-group .selected a {
-    background: #000;
-    color: #ffffff; }
-  .btn-group li:hover a {
-    background: #FBF2F2; }
-
-/* font & padding & margin styles */
 .mt-2 {
   margin-top: 2px; }
 
@@ -1858,6 +1507,439 @@ a.btn {
 .mb-304 {
   margin-bottom: 304px; }
 
+/* ------ for tablet ----- */
+@media screen and (max-width: 992px) {
+  .mt-40 {
+    margin-top: 32px; }
+  .mb-42 {
+    margin-bottom: 24px; }
+  .mb-304 {
+    margin-bottom: 104px; } }
+
+/* for smartphone */
+@media screen and (max-width: 768px) {
+  /* padding & margin */
+  .mb-104 {
+    margin-bottom: 56px; }
+  .mb-304 {
+    margin-bottom: 56px; }
+  .mb-36 {
+    margin-bottom: 12px; } }
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* ------- End of CSS reset -------- */
+/* container */
+.container {
+  margin: 0 auto;
+  max-width: 1110px; }
+  @media screen and (max-width: 992px) {
+    .container {
+      max-width: 690px; } }
+  @media screen and (max-width: 768px) {
+    .container {
+      max-width: 345px; } }
+
+.container-p30 {
+  max-width: 1140px;
+  margin: 0 auto; }
+  @media screen and (max-width: 992px) {
+    .container-p30 {
+      max-width: 720px; } }
+  @media screen and (max-width: 768px) {
+    .container-p30 {
+      max-width: 345px; } }
+
+.container-sm {
+  max-width: 730px;
+  margin: 0 auto; }
+  @media screen and (max-width: 992px) {
+    .container-sm {
+      max-width: 450px; } }
+  @media screen and (max-width: 768px) {
+    .container-sm {
+      max-width: 345px; } }
+
+.pic-banner {
+  background: center/cover no-repeat url("../images/pic-banner.png");
+  height: 304px;
+  padding-bottom: 8px; }
+  .pic-banner h1 {
+    font: normal normal bold 64px/80px "Noto Sans"; }
+  @media screen and (max-width: 992px) {
+    .pic-banner {
+      margin-bottom: 0; }
+      .pic-banner h1 {
+        font: normal normal bold 48px/80px "Noto Sans"; } }
+
+/* navs */
+.nav-p-64 {
+  display: flex; }
+  .nav-p-64 li {
+    margin-right: 64px; }
+    .nav-p-64 li:last-child a {
+      margin-right: 0; }
+  @media screen and (max-width: 992px) {
+    .nav-p-64 {
+      display: flex; }
+      .nav-p-64 li {
+        margin-right: 40px; }
+        .nav-p-64 li:last-child a {
+          margin-right: 0; } }
+
+.nav-p-48 {
+  display: flex; }
+  .nav-p-48 li {
+    margin-right: 48px; }
+    .nav-p-48 li:last-child a {
+      margin-right: 0; }
+  @media screen and (max-width: 992px) {
+    .nav-p-48 {
+      display: flex; }
+      .nav-p-48 li {
+        margin-right: 32px; }
+        .nav-p-48 li:last-child a {
+          margin-right: 0; } }
+
+.nav-p-32 {
+  display: flex; }
+  .nav-p-32 li {
+    margin-right: 32px; }
+    .nav-p-32 li:last-child a {
+      margin-right: 0; }
+  @media screen and (max-width: 992px) {
+    .nav-p-32 {
+      display: flex; }
+      .nav-p-32 li {
+        margin-right: 24px; }
+        .nav-p-32 li:last-child a {
+          margin-right: 0; } }
+
+.nav-p-30 {
+  display: flex; }
+  .nav-p-30 li {
+    margin-right: 30px; }
+    .nav-p-30 li:last-child a {
+      margin-right: 0; }
+  @media screen and (max-width: 992px) {
+    .nav-p-30 {
+      display: flex; }
+      .nav-p-30 li {
+        margin-right: 0; }
+        .nav-p-30 li:last-child a {
+          margin-right: 0; } }
+
+.nav-p-0 {
+  display: flex; }
+  .nav-p-0 li {
+    margin-right: 0; }
+    .nav-p-0 li:last-child a {
+      margin-right: 0; }
+
+/* layouts */
+.row {
+  display: flex; }
+
+.row-start-center {
+  display: flex;
+  align-items: center; }
+
+.row-start-end {
+  display: flex;
+  align-items: center; }
+
+.row-reverse {
+  display: flex;
+  flex-direction: row-reverse; }
+
+.row-reverse-center {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center; }
+
+.row-btw {
+  display: flex;
+  justify-content: space-between; }
+
+.row-btw-baseline {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; }
+
+.row-end {
+  display: flex;
+  justify-content: end;
+  align-items: flex-end; }
+
+.row-btw-center {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.row-start-bottom {
+  display: flex;
+  align-items: flex-end; }
+
+.row-wrap {
+  display: flex;
+  flex-wrap: wrap; }
+
+/* list gaps */
+.list-gap-32 li {
+  margin-bottom: 32px; }
+  .list-gap-32 li:last-child {
+    margin-bottom: 0; }
+
+@media screen and (max-width: 992px) {
+  .list-gap-32 li {
+    margin-bottom: 8px; }
+    .list-gap-32 li:last-child {
+      margin-bottom: 0; } }
+
+.list-gap-16 li {
+  margin-bottom: 16px; }
+  .list-gap-16 li:last-child {
+    margin-bottom: 0; }
+
+@media screen and (max-width: 992px) {
+  .list-gap-16 li {
+    margin-bottom: 8px; }
+    .list-gap-16 li:last-child {
+      margin-bottom: 0; } }
+
+/* buttons */
+a.btn {
+  display: block; }
+
+.btn {
+  text-align: center;
+  margin: 0 auto; }
+
+.btn-primary {
+  display: block;
+  border: none;
+  background-color: #AA0601;
+  color: #ffffff; }
+  .btn-primary:hover {
+    background-color: #650300; }
+
+.btn-black {
+  display: block;
+  border: none;
+  background-color: #000000;
+  color: #ffffff; }
+  .btn-black:hover {
+    background-color: #AA0601; }
+
+.btn-group {
+  display: inline-flex;
+  align-items: stretch;
+  color: #555555;
+  font: normal normal normal 18px/27px Roboto; }
+  .btn-group a {
+    color: #555555;
+    display: block;
+    border: 1px solid #555555;
+    padding: 11px 16px; }
+  .btn-group li:first-child a, .btn-group li:last-child a {
+    font: normal normal normal 19px/29px "Noto Sans";
+    padding: 10px 12px; }
+  .btn-group .selected a {
+    background: #000;
+    color: #ffffff; }
+  .btn-group li:hover a {
+    background: #FBF2F2; }
+
+/* icons */
+.logo {
+  content: url("https://hexschool.github.io/webLayoutTraining1st/week3/logo.png");
+  display: inline-block;
+  vertical-align: middle; }
+  .logo h1 {
+    padding-left: 101%;
+    overflow: hidden;
+    white-space: nowrap; }
+
+.logo-small {
+  content: url("https://hexschool.github.io/webLayoutTraining1st/week3/logo.png");
+  display: inline-block;
+  vertical-align: middle;
+  width: 46px; }
+
+.icon-title img {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 17px; }
+
+.icon-title .icon {
+  margin-right: 17px; }
+
+.icon-20 {
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px; }
+
+.icon-24 {
+  display: inline-block;
+  vertical-align: middle;
+  height: 24px;
+  width: 24px; }
+
+.icon {
+  display: inline-block;
+  vertical-align: middle;
+  height: 48px;
+  width: 48px; }
+
+.icon-lg {
+  display: inline-block;
+  vertical-align: middle;
+  height: 64px;
+  width: 64px; }
+
+.icon-diamond {
+  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-diamond.svg"); }
+
+.icon-sun {
+  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-sun.svg"); }
+
+.icon-thunder {
+  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-thunder.svg"); }
+
+.icon-location {
+  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-location.svg"); }
+
+.icon-question {
+  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-help.svg"); }
+
+.icon-phone {
+  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-phone-black.svg"); }
+
+.icon-map {
+  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-phone-black.svg"); }
+
+.icon-clock {
+  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-clock-black.svg"); }
+
+.icon-search {
+  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-search.svg"); }
+
+.icon-fb {
+  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/logo-facebook.svg"); }
+
+.icon-ig {
+  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/logo-instagram.svg"); }
+
+.icon-tag {
+  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-tag.svg"); }
+
+.icon-undo {
+  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-undo.svg"); }
+
+.icon-redo {
+  background: center/contain no-repeat url("https://hexschool.github.io/webLayoutTraining1st/week3/icon-redo.svg"); }
+
+.brown-sqrt {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  margin-right: 8px;
+  background: #5F3E2D; }
+
+.orange-sqrt {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  margin-right: 8px;
+  background: #B75929; }
+
+/* ------ for tablet ----- */
+@media screen and (max-width: 992px) {
+  .icon {
+    width: 32px;
+    height: 32px; }
+  .icon-sm {
+    width: 20px;
+    height: 20px; }
+  .icon-lg {
+    width: 48px;
+    height: 48px; } }
+
+/* for smartphone */
+@media screen and (max-width: 768px) {
+  .icon {
+    width: 14px;
+    height: 14px; }
+  .brown-sqrt, .orange-sqrt {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px; }
+  .icon-title img, .icon-title .icon {
+    margin-right: 5px; } }
+
+/* base */
+img {
+  display: block;
+  max-width: 100%; }
+
+*, *:before, *:after {
+  box-sizing: border-box; }
+
+:root {
+  font-family: "Roboto", "Noto Sans"; }
+
+a {
+  text-decoration: none;
+  color: #111619; }
+
 /* other style */
 .primary-theme {
   background: #AA0601;
@@ -1888,60 +1970,6 @@ a.btn {
 
 /* ------ for tablet ----- */
 @media screen and (max-width: 992px) {
-  .container {
-    max-width: 690px; }
-  .container-p30 {
-    max-width: 730px; }
-  .container-sm {
-    max-width: 450px; }
-  /* pic banner */
-  .pic-banner {
-    margin-bottom: 0; }
-    .pic-banner h1 {
-      font: normal normal bold 48px/80px "Noto Sans"; }
-  /* padding & margin */
-  .list-gap-32 li {
-    margin-bottom: 8px; }
-    .list-gap-32 li:last-child {
-      margin-bottom: 0; }
-  .list-gap-16 li {
-    margin-bottom: 8px; }
-    .list-gap-16 li:last-child {
-      margin-bottom: 0; }
-  .nav-p-64 {
-    display: flex; }
-    .nav-p-64 li {
-      margin-right: 40px; }
-      .nav-p-64 li:last-child a {
-        margin-right: 0; }
-  .nav-p-48 {
-    display: flex; }
-    .nav-p-48 li {
-      margin-right: 32px; }
-      .nav-p-48 li:last-child a {
-        margin-right: 0; }
-  .nav-p-32 {
-    display: flex; }
-    .nav-p-32 li {
-      margin-right: 24px; }
-      .nav-p-32 li:last-child a {
-        margin-right: 0; }
-  .nav-p-30 {
-    display: flex; }
-    .nav-p-30 li {
-      margin-right: 0; }
-      .nav-p-30 li:last-child a {
-        margin-right: 0; }
-  .mt-40 {
-    margin-top: 32px; }
-  .mb-42 {
-    margin-bottom: 24px; }
-  .mb-304 {
-    margin-bottom: 104px; }
-  /* fonts */
-  .fnt-20-l-30 {
-    font-size: 16px;
-    line-height: 24px; }
   /* display */
   .large-only {
     display: none; }
@@ -1950,22 +1978,6 @@ a.btn {
 
 /* for smartphone */
 @media screen and (max-width: 768px) {
-  .container, .container-sm, .container-p30 {
-    max-width: 345px; }
-  /* padding & margin */
-  .mb-104 {
-    margin-bottom: 56px; }
-  .mb-304 {
-    margin-bottom: 56px; }
-  .mb-36 {
-    margin-bottom: 12px; }
-  /* fonts */
-  .fnt-16-l-24 {
-    font-size: 14px;
-    line-height: 21px; }
-  .fnt-20-l-30 {
-    font-size: 16px;
-    line-height: 24px; }
   /* display control */
   .small-only {
     display: block !important; }
