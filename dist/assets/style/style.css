@@ -269,10 +269,15 @@ a {
   display: flex;
   justify-content: space-between; }
 
+.row-btw-baseline {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline; }
+
 .row-end {
   display: flex;
   justify-content: end;
-  align-items: end; }
+  align-items: flex-end; }
 
 .row-btw-center {
   display: flex;
@@ -281,7 +286,7 @@ a {
 
 .row-start-bottom {
   display: flex;
-  align-items: end; }
+  align-items: flex-end; }
 
 .row-wrap {
   display: flex;
@@ -2074,13 +2079,11 @@ a.btn {
     font: normal normal normal 36px/54px "Noto Sans"; }
 
 .feature-item {
-  width: 20%;
-  /* for img vertical align center */ }
+  width: 20%; }
   .feature-item .img-wrap {
-    height: 100px;
-    margin-bottom: 40px;
-    display: flex;
-    justify-content: center; }
+    margin-bottom: 40px; }
+    .feature-item .img-wrap img {
+      margin: 0 auto; }
   .feature-item h3 {
     color: #650300;
     font: normal normal bold 24px/36px "Noto Sans"; }

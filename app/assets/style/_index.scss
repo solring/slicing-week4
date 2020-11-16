@@ -33,12 +33,11 @@
 .feature-item {
   width: 20%;
 
-  /* for img vertical align center */
   .img-wrap {
-      height: 100px;
+      img {
+          margin: 0 auto;
+      }
       margin-bottom: 40px;
-      display: flex;
-      justify-content: center;
   }
 
   h3 {
