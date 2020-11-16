@@ -1,11 +1,9 @@
 @mixin nav($gap: 0) {
     display: flex;
     li {
-        a {
-            padding-right: $gap;
-        }
+        margin-right: $gap;
         &:last-child a{
-            padding-right: 0;
+            margin-right: 0;
         }
     }
 }
@@ -52,5 +50,17 @@
             width: $width;
             margin-right: unquote($gap + 'px');
         }
+    }
+}
+
+@mixin pad{
+    @media screen and (max-width:992px) {
+        @content
+    }
+}
+
+@mixin phone{
+    @media screen and (max-width:768px) {
+        @content
     }
 }
