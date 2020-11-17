@@ -36,6 +36,16 @@
         font: normal normal normal #{$font}/#{$line_height} Roboto;
         margin-bottom: 11px;
     } 
+
+    .price, .name {
+        @include pad {
+            font-size: 24px;
+            line-height: 30px;
+        }
+        @include phone {
+            font-size: 16px;
+        }
+    }
 }
 
 .product-tabs {
@@ -43,22 +53,45 @@
     margin: 0 auto;
     font: normal normal 500 42px/55px Roboto;
     font-variant-caps: all-petite-caps;
+
+    @include phone {
+        font: normal normal 500 14px/19px Roboto;
+    }
+
     li {
         border: 1px solid $secondary-gray-color;
         width: 34%;
-        &.selected, &:hover {
-            border-bottom: 16px solid $primary-theme-color;
+        
+        a {
+            display: block;
+            padding: 24px 0;
+            @include pad {
+                padding: 16px 0;
+            }
+            @include phone {
+                padding: 8px 0;
+            }
         }
 
-        a {
-            padding: 24px 0;
-            display: block;
+        &.selected a, &:hover a{
+            border-bottom: 16px solid $primary-theme-color;
+            @include pad {
+                border-bottom: 8px solid $primary-theme-color;
+            }
+            @include phone {
+                border-bottom: 4px solid $primary-theme-color;
+            }
         }
     }
 }
 
 .product-banner {
     height: 309px;
+
+    @include phone {
+        height: 144px;
+    }
+
     .banner-left {
         @include banner-pic("https://hexschool.github.io/webLayoutTraining1st/week3/banner-1.png");
     }
@@ -76,13 +109,35 @@
         @include banner-pic("https://hexschool.github.io/webLayoutTraining1st/week3/banner-2.png");
     }
 }
+
 .product-details {
     padding-top: 88px;
+    @include pad {
+        padding-top: 40px;
+    }
+    @include phone {
+        padding-top: 20px;
+    }
+
     h1 {
         font: normal normal 500 42px/63px Roboto;
+        @include pad {
+            font-size: 32px;
+            line-height: 48px;
+        }
+        @include phone {
+            font-size: 20px;
+        }
     }
     h3 {
         font: normal normal normal 32px/48px "Noto Sans";
+        @include pad {
+            font-size: 24px;
+            line-height: 36px;
+        }
+        @include phone {
+            font-size: 16px;
+        }
     }
 }
 
@@ -97,41 +152,16 @@
         flex-direction: column;
         justify-content: center;
         align-items: start;
+
+        @include pad {
+            flex-direction: row;
+            align-items: center;
+        }
     }
 } 
 
-/* ------ for tablet ----- */
-@media screen and (max-width: 992px) {
-
-    /* product details */
-    .product-tabs {
-        font: normal normal 500 28px/42px Roboto;
-        font-variant-caps: all-petite-caps;
-
-        li {
-            padding: 16px 0;
-            &.selected {
-                border-bottom: 8px solid $primary-theme-color;
-            }
-        }
-    }
-    .product-details {
-        padding-top: 40px;
-        h2 {
-            font-size: 32px;
-            line-height: 48px;
-        }
-        h3 {
-            font-size: 24px;
-            line-height: 36px;
-        }
-        .price, .name {
-            font-size: 24px;
-            line-height: 30px;
-        }
-    }
-
-    .product-item-list-4r, .product-item-list-3r {
+.product-item-list-4r, .product-item-list-3r {
+    @include pad {
         @include wrap-n-column(2, 30, 690);
         li {
             margin-bottom: 72px;
@@ -140,53 +170,11 @@
             height: 164px;
         }
     }
-
-    .product-item-list-3r {
-        .row-btw-center {
-            flex-direction: row;
-            align-items: center;
-        }
-    }
-}
-
-/* for smartphone */
-@media screen and (max-width: 768px) {
-
-    /* product details */
-    .product-banner {
-        height: 144px;
-    }
-
-    .product-tabs {
-        font: normal normal 500 14px/19px Roboto;
-        font-variant-caps: all-petite-caps;
-
-        li {
-            padding: 8px 0;
-            &.selected {
-                border-bottom: 4px solid $primary-theme-color;
-            }
-        }
-    }
-    .product-details {
-        padding-top: 20px;
-        h2 {
-            font-size: 20px;
-        }
-        h3 {
-            font-size: 16px;
-        }
-        .price, .name {
-            font-size: 16px;
-        }
-    }
-
-    .product-item-list-4r, .product-item-list-3r {
+    @include phone {
         @include wrap-n-column(1, 0, 345);
         li {
             margin-bottom: 32px;
         }
     }
-
-
 }
+

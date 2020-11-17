@@ -3794,16 +3794,16 @@ a.btn {
   content: url("https://hexschool.github.io/webLayoutTraining1st/week3/logo.png");
   display: inline-block;
   vertical-align: middle; }
-  .logo h1 {
-    padding-left: 101%;
-    overflow: hidden;
-    white-space: nowrap; }
+  .logo:hover {
+    opacity: 0.7; }
 
 .logo-small {
   content: url("https://hexschool.github.io/webLayoutTraining1st/week3/logo.png");
   display: inline-block;
   vertical-align: middle;
   width: 46px; }
+  .logo-small:hover {
+    opacity: 0.7; }
 
 .icon-title img {
   display: inline-block;
@@ -4050,6 +4050,10 @@ a {
   padding-bottom: 28px;
   padding-right: 39px;
   padding-left: 39px; }
+  @media screen and (max-width: 992px) {
+    .footer .icon-title img {
+      width: 28px;
+      height: auto; } }
 
 .footer-bottom {
   width: 100%;
@@ -4066,18 +4070,17 @@ a {
   font: normal normal normal 36px/54px Roboto; }
   .contact .icon-title img {
     width: 48px; }
+  @media screen and (max-width: 992px) {
+    .contact {
+      font-size: 20px;
+      line-height: 30px; } }
 
-/* =========== RWD ========== */
-/* ------ for tablet ----- */
+.icon-list a:hover {
+  opacity: 0.7; }
+
 @media screen and (max-width: 992px) {
-  .contact {
-    font-size: 20px;
-    line-height: 30px; }
   .icon-list img {
     width: 24px;
-    height: auto; }
-  .footer .icon-title img {
-    width: 28px;
     height: auto; } }
 
 @media screen and (max-width: 768px) {
@@ -4366,17 +4369,35 @@ a {
   margin: 0 auto;
   font: normal normal 500 42px/55px Roboto;
   font-variant-caps: all-petite-caps; }
+  @media screen and (max-width: 768px) {
+    .product-tabs {
+      font: normal normal 500 14px/19px Roboto; } }
   .product-tabs li {
     border: 1px solid #DCDCDC;
     width: 34%; }
-    .product-tabs li.selected, .product-tabs li:hover {
-      border-bottom: 16px solid #AA0601; }
     .product-tabs li a {
-      padding: 24px 0;
-      display: block; }
+      display: block;
+      padding: 24px 0; }
+      @media screen and (max-width: 992px) {
+        .product-tabs li a {
+          padding: 16px 0; } }
+      @media screen and (max-width: 768px) {
+        .product-tabs li a {
+          padding: 8px 0; } }
+    .product-tabs li.selected a, .product-tabs li:hover a {
+      border-bottom: 16px solid #AA0601; }
+      @media screen and (max-width: 992px) {
+        .product-tabs li.selected a, .product-tabs li:hover a {
+          border-bottom: 8px solid #AA0601; } }
+      @media screen and (max-width: 768px) {
+        .product-tabs li.selected a, .product-tabs li:hover a {
+          border-bottom: 4px solid #AA0601; } }
 
 .product-banner {
   height: 309px; }
+  @media screen and (max-width: 768px) {
+    .product-banner {
+      height: 144px; } }
   .product-banner .banner-left {
     width: 50%;
     height: 100%;
@@ -4399,10 +4420,30 @@ a {
 
 .product-details {
   padding-top: 88px; }
+  @media screen and (max-width: 992px) {
+    .product-details {
+      padding-top: 40px; } }
+  @media screen and (max-width: 768px) {
+    .product-details {
+      padding-top: 20px; } }
   .product-details h1 {
     font: normal normal 500 42px/63px Roboto; }
+    @media screen and (max-width: 992px) {
+      .product-details h1 {
+        font-size: 32px;
+        line-height: 48px; } }
+    @media screen and (max-width: 768px) {
+      .product-details h1 {
+        font-size: 20px; } }
   .product-details h3 {
     font: normal normal normal 32px/48px "Noto Sans"; }
+    @media screen and (max-width: 992px) {
+      .product-details h3 {
+        font-size: 24px;
+        line-height: 36px; } }
+    @media screen and (max-width: 768px) {
+      .product-details h3 {
+        font-size: 16px; } }
 
 .product-item-list-4r {
   display: flex;
@@ -4429,6 +4470,13 @@ a {
   .product-item-list-4r .name {
     font: normal normal normal 24px/36px Roboto;
     margin-bottom: 11px; }
+  @media screen and (max-width: 992px) {
+    .product-item-list-4r .price, .product-item-list-4r .name {
+      font-size: 24px;
+      line-height: 30px; } }
+  @media screen and (max-width: 768px) {
+    .product-item-list-4r .price, .product-item-list-4r .name {
+      font-size: 16px; } }
 
 .product-item-list-3r {
   display: flex;
@@ -4455,32 +4503,23 @@ a {
   .product-item-list-3r .name {
     font: normal normal normal 18px/30px Roboto;
     margin-bottom: 11px; }
+  @media screen and (max-width: 992px) {
+    .product-item-list-3r .price, .product-item-list-3r .name {
+      font-size: 24px;
+      line-height: 30px; } }
+  @media screen and (max-width: 768px) {
+    .product-item-list-3r .price, .product-item-list-3r .name {
+      font-size: 16px; } }
   .product-item-list-3r .row-btw-center {
     flex-direction: column;
     justify-content: center;
     align-items: start; }
+    @media screen and (max-width: 992px) {
+      .product-item-list-3r .row-btw-center {
+        flex-direction: row;
+        align-items: center; } }
 
-/* ------ for tablet ----- */
 @media screen and (max-width: 992px) {
-  /* product details */
-  .product-tabs {
-    font: normal normal 500 28px/42px Roboto;
-    font-variant-caps: all-petite-caps; }
-    .product-tabs li {
-      padding: 16px 0; }
-      .product-tabs li.selected {
-        border-bottom: 8px solid #AA0601; }
-  .product-details {
-    padding-top: 40px; }
-    .product-details h2 {
-      font-size: 32px;
-      line-height: 48px; }
-    .product-details h3 {
-      font-size: 24px;
-      line-height: 36px; }
-    .product-details .price, .product-details .name {
-      font-size: 24px;
-      line-height: 30px; }
   .product-item-list-4r, .product-item-list-3r {
     display: flex;
     flex-wrap: wrap;
@@ -4491,31 +4530,9 @@ a {
     .product-item-list-4r li, .product-item-list-3r li {
       margin-bottom: 72px; }
     .product-item-list-4r .pic-container, .product-item-list-3r .pic-container {
-      height: 164px; }
-  .product-item-list-3r .row-btw-center {
-    flex-direction: row;
-    align-items: center; } }
+      height: 164px; } }
 
-/* for smartphone */
 @media screen and (max-width: 768px) {
-  /* product details */
-  .product-banner {
-    height: 144px; }
-  .product-tabs {
-    font: normal normal 500 14px/19px Roboto;
-    font-variant-caps: all-petite-caps; }
-    .product-tabs li {
-      padding: 8px 0; }
-      .product-tabs li.selected {
-        border-bottom: 4px solid #AA0601; }
-  .product-details {
-    padding-top: 20px; }
-    .product-details h2 {
-      font-size: 20px; }
-    .product-details h3 {
-      font-size: 16px; }
-    .product-details .price, .product-details .name {
-      font-size: 16px; }
   .product-item-list-4r, .product-item-list-3r {
     display: flex;
     flex-wrap: wrap;

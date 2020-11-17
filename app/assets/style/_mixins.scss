@@ -53,6 +53,18 @@
     }
 }
 
+@mixin hideText {
+    padding-left: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+@mixin hoverOpacity {
+    &:hover {
+        opacity: 0.7;
+    }
+}
+
 @mixin pad{
     @media screen and (max-width:992px) {
         @content

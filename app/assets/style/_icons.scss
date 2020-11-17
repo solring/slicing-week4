@@ -4,17 +4,14 @@
     content: url("https://hexschool.github.io/webLayoutTraining1st/week3/logo.png");
     display: inline-block;
     vertical-align: middle;
-    h1 {
-        padding-left: 101%;
-        overflow: hidden;
-        white-space: nowrap;
-    }
+    @include hoverOpacity;
 }
 .logo-small {
     content: url("https://hexschool.github.io/webLayoutTraining1st/week3/logo.png");
     display: inline-block;
     vertical-align: middle;
     width: 46px;
+    @include hoverOpacity;
 }
 
 .icon-title {

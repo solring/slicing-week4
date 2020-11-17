@@ -7,6 +7,13 @@
     padding-bottom: 28px;
     padding-right: 39px;
     padding-left: 39px;
+
+    @include pad {
+        .icon-title img{
+            width: 28px;
+            height: auto;
+        } 
+    }
 }
 
 .footer-bottom {
@@ -32,30 +39,26 @@
             width: 48px;
         }
     }
-}
 
-/* =========== RWD ========== */
-
-/* ------ for tablet ----- */
-@media screen and (max-width: 992px) {
-    .contact{
+    @include pad {
         font-size: 20px;
         line-height: 30px;
     }
+}
 
-    .icon-list {
+.icon-list {
+    a {
+        @include hoverOpacity;
+    }
+    
+    @include pad{
         img {
             width: 24px;
             height: auto;
         }
     }
-    .footer {
-        .icon-title img{
-            width: 28px;
-            height: auto;
-        } 
-    }
 }
+
 
 @media screen and (max-width: 768px) {
     .header {
