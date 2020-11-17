@@ -1,9 +1,12 @@
 @mixin nav($gap: 0) {
     display: flex;
     li {
-        margin-right: $gap;
+        a {
+            display: block; // Essencial. or padding will fail.
+            padding-right: $gap;
+        }
         &:last-child a{
-            margin-right: 0;
+            padding-right: 0;
         }
     }
 }
